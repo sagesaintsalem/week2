@@ -50,10 +50,12 @@ class TestRoom(unittest.TestCase):
         self.room.add_song(self.request_3)
         self.assertEqual(["Trenuletul"], self.room.playlist)
 
-    def test_song_played(self):
+    def test_song_played(self): 
         self.room.add_song(self.request_1)
         self.room.add_song(self.request_2)
         self.room.add_song(self.request_4)
         self.room.song_played()
         self.assertEqual(["Diva", "Alcohol is Free"], self.room.playlist)
-       
+       #I added this because I figured that a playlist would automatically remove
+       #songs already played. I wanted to add played songs to a song history list but
+       #couldn't figure it out.
